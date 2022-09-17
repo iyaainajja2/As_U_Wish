@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Leaflet map</title>
+        <meta charset="utf-8"/>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+    </head>
+
+    <body>
+        <div id="map" style="width:900px; height:400px"></div>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+        <script>
+            var osmLink ='<a href="http://openstreetmap.org">OpenStreetMap</a>',
+            thunLink = '<a href="http://thunderforest.com/">Thunderforest</a>';
+            var osmUrl = 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            osmAttrib = '&copy;'+osmLink  + 'Contributors',
+            landUrl = 'http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png',
+            thunAttrib = '&copy; '+osmLink+'Contributors &'+thunLink;
+            var osmMap = L.tileLayer(osmUrl, {attribution: thunAttrib}),
+            landMap = L.tileLayer(landUrl,{attribution: thunAttrib});
+            var map = L.map('map', {
+                layers: [osmMap]//only add one!
+            })
+            .setView([-7.305421, 110.059838],7);
+            var baseLayer = {
+                "OSM Mapnik":osmMap,
+                "Landscape":landmap
+            };
+            L.control.layer(baseLayers).addTo(map);
+        </script>
+    </body>
+</html>

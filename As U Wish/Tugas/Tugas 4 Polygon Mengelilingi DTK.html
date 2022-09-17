@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Polygon GSP</title>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+    <body>
+        <div id = "map" style = "width:900px; height:580px"></div>
+        <script>
+            var mapOptions = {
+                center: [-7.774824263341242, 110.37449182370257],
+                zoom: 18
+            }
+            var map = new L.map('map', mapOptions);
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            map.addLayer(layer);
+            var latlngs = [
+                [-7.774500041819518, 110.37437112430254],
+                [-7.774651522396432, 110.37473858694376],
+                [-7.775145827060779, 110.37454815011266],
+                [-7.774994346660997, 110.37416191203266],
+            ];
+            var polygon = L.polygon(latlngs, {color: 'red'});
+            polygon.addTo(map);
+        </script>
+    </body>
+</html>

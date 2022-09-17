@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tempat Makan Sekitar SV UGM</title>
+        <meta chareset="utf-8"/>
+        <link rel="stylesheet"
+        href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+    </head>
+    <body>
+        <div id="map" style="width:1000px; height:590px"></div>
+    <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([-7.774546999482909, 110.37451279724353],16);
+         mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+         L.tileLayer(
+        'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+            attribution: '&copy;' + mapLink + 'Contributors',
+            maxZoom: 20,
+        }).addTo(map);
+        var customIcon= L.Icon.extend({
+        options: {
+            iconSize: [60,40],
+            }
+        })
+        //Label nama icon (var noodleIcon..var nasgorIcon) Tolong diubah sama tinggal masukin iconUrl aja ya fren baru nanti markernya keluar, nyari Url icon disini ya fren https://www.svgrepo.com. Lov 69 
+        var noodleIcon = new customIcon({iconUrl:'masukin icoUrl di sini ya fren. lov 69'});
+        var penyetanIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var angkringanIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var kfcIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var madamIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var pondokcabeIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var kedaiIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var gudegIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        var nasgorIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+        //Jangan lupa di bagian {icon:noodleIcon} disesuaikan dengan nama icon klen yg var noodleIcon yg udah diganti ya fren. Lov 69
+        var marker1 = L.marker([-7.775286012831578, 110.3727679315618], {icon:noodleIcon}).addTo(map);
+        var marker2 = L.marker([-7.7740140412465975, 110.3719521313387], {icon:penyetanIcon}).addTo(map);
+        var marker3 = L.marker([-7.7749375415015765, 110.37096340204194], {icon:angkringanIcon}).addTo(map);
+        var marker4 = L.marker([-7.775785807312892, 110.37466978813856], {icon:kfcIcon}).addTo(map);
+        var marker5 = L.marker([-7.775110952605848, 110.3749782184522], {icon:madamIcon}).addTo(map);
+        var marker6 = L.marker([-7.776845327139595, 110.37381837901178], {icon:pondokcabeIcon}).addTo(map);
+        var marker7 = L.marker([-7.776324449048921, 110.37434409195394], {icon:kedaiIcon}).addTo(map);
+        var marker8 = L.marker([-7.777770149896246, 110.37363598877198], {icon:gudegIcon}).addTo(map);
+        var marker9 = L.marker([ -7.773411439625849, 110.37449280518169], {icon:nasgorIcon}).addTo(map);
+        marker1.bindPopup('Mie Ayam POTEK (Pojok Teknik').openPopup();
+        marker2.bindPopup('Penyetan Bilqis').openPopup();
+        marker3.bindPopup('Angkringan Om Kempok').openPopup();
+        marker4.bindPopup('KFC').openPopup();
+        marker5.bindPopup('Madam Tan Indonesian Food').openPopup();
+        marker6.bindPopup('Pondok Cabe').openPopup();
+        marker7.bindPopup('Kedai Yuk Makan').openPopup();
+        marker8.bindPopup('Gudeg Yu Sum').openPopup();
+        marker9.bindPopup('Nasi Goreng Mandiri').openPopup();
+        //Sekian terimagaji, kalo gatau nanya jan diem diem aja tengs.
+    </script>
+    </body>
+</html>

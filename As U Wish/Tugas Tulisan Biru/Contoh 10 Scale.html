@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaflet Scale</title>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+
+    <body>
+        <div id = "map" style = "width:900px; height:580px"></div>
+        <script>
+            //Creating map option
+            var mapOptions = {
+                center: [-7.905421, 110.059838],
+                zoom: 10
+            }
+
+            //Creating map object
+            var map = new L.map('map', mapOptions);
+
+            //Creating a layer object
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            //Adding layer to map
+            map.addLayer(layer);
+            //Creating Scale Control
+            var scale = L.control.scale();
+            //Adding scale contorl to map
+            scale.addTo(map);
+        </script>
+    </body>
+</html>

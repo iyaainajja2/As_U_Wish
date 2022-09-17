@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kantong Parkit Motor di UGM</title>
+        <meta chareset="utf-8"/>
+        <link rel="stylesheet"
+        href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"/>
+    </head>
+    <body>
+        <div id="map" style="width:1000px; height:580px"></div>
+        <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+        <script>
+            var map = L.map('map').setView([-7.770636233817304, 110.3787811760522],16);
+             mapLink = '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+             L.tileLayer(
+            'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+                attribution: '&copy;' + mapLink + 'Contributors',
+                maxZoom: 20,
+            }).addTo(map);
+            var customIcon= L.Icon.extend({
+            options: {
+                iconSize: [60,40],
+                }
+            })
+            //Label nama icon (var plane..var ke24Icon) Tolong diubah sama tinggal masukin iconUrl aja ya fren baru nanti markernya keluar, nyari Url icon disini ya fren https://www.svgrepo.com. Lov 69
+            var planeIcon = new customIcon({iconUrl:'masukin icoUrl di sini ya fren. lov 69'});
+            var lapanganIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var airIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ketigaIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var keempatIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var kelimaIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var keenamIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ketujuhIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var kelapanIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var kesembilanIcon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke10Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke11Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke12Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke13Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke14Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke15Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke16Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke17Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke18Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke19Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke20Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke21Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke22Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke23Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            var ke24Icon = new customIcon({iconUrl: 'masukin icoUrl di sini ya fren. lov 69'});
+            //Jangan lupa di bagian {icon:planeIcon} disesuaikan dengan nama icon klen yg var planeIcon yg udah diganti ya fren. Lov 69
+            var marker1 = L.marker([-7.771541386572006, 110.38098916226652], {icon:planeIcon}).addTo(map);
+            var marker2 = L.marker([-7.769210917151128, 110.37734678650811], {icon:lapanganIcon}).addTo(map);
+            var marker3 = L.marker([-7.76834985776734, 110.37938526535945], {icon:airIcon}).addTo(map);
+            var marker4 = L.marker([-7.770911770004924, 110.37585547829586], {icon:ketigaIcon}).addTo(map);
+            var marker5 = L.marker([-7.768307336268683, 110.38109115029296], {icon:keempatIcon}).addTo(map);
+            var marker6 = L.marker([-7.767068630882254, 110.3838122031324], {icon:kelimaIcon}).addTo(map);
+            var marker7 = L.marker([-7.768245707446713, 110.38419859690046], {icon:keenamIcon}).addTo(map);
+            var marker8 = L.marker([-7.769102475845253, 110.37915231696938], {icon:kelapanIcon}).addTo(map);
+            var marker9 = L.marker([ -7.770427976265073, 110.37857549852697], {icon:kesembilanIcon}).addTo(map);
+            var marker10 = L.marker([-7.772062482306626, 110.37822000176004], {icon:ke10Icon}).addTo(map);
+            var marker11 = L.marker([-7.774958220464015, 110.37687966389095], {icon:ke11Icon}).addTo(map);
+            var marker12 = L.marker([-7.770987614269035, 110.38157876715], {icon:ke12Icon}).addTo(map);
+            var marker13 = L.marker([-7.7703636848981885, 110.38162374657072], {icon:ke13Icon}).addTo(map);
+            var marker14 = L.marker([-7.770177831422961, 110.38218460326125], {icon:ke14Icon}).addTo(map);
+            var marker15 = L.marker([-7.771412973537341, 110.38245770572452], {icon:ke15Icon}).addTo(map);
+            var marker16 = L.marker([-7.771221227021982, 110.38252325414224], {icon:ke16Icon}).addTo(map);
+            var marker17 = L.marker([-7.773042465566763, 110.37978604333155], {icon:ke17Icon}).addTo(map);
+            var marker18 = L.marker([-7.773598855772487, 110.37666214356734], {icon:ke18Icon}).addTo(map);
+            var marker19 = L.marker([-7.774297798379242, 110.376315673356], {icon:ke19Icon}).addTo(map);
+            var marker20 = L.marker([-7.771967042351851, 110.37657627886051], {icon:ke20Icon}).addTo(map);
+            var marker21 = L.marker([-7.774925947251251, 110.37424356848808], {icon:ke21Icon}).addTo(map);
+            var marker22 = L.marker([-7.774307414967232, 110.3738690061011], {icon:ke22Icon}).addTo(map);
+            var marker23 = L.marker([-7.775436235716906, 110.37300126987843], {icon:ke23Icon}).addTo(map);
+            var marker24 = L.marker([-7.7737754764678195, 110.37475547041676], {icon:ke24Icon}).addTo(map);
+            marker1.bindPopup('Lahan Parkir Fakultas Filsafat').openPopup();
+            marker2.bindPopup('Lahan Parkir Perpusat UGM').openPopup();
+            marker3.bindPopup('Lahan Parkir Gedung Pusat UGM').openPopup();
+            marker4.bindPopup('Lahan Parkir FKG').openPopup();
+            marker5.bindPopup('Lahan Parkir Fakultas Pertanian').openPopup();
+            marker6.bindPopup('Lahan Parkir FKH').openPopup();
+            marker7.bindPopup('Lahan Parkir FKH').openPopup();
+            marker8.bindPopup('Lahan Parkir FISIPOL').openPopup();
+            marker9.bindPopup('Lahan Parkir GSP').openPopup();
+            marker10.bindPopup('Lahan Parkir FIB').openPopup();
+            marker11.bindPopup('Lahan Parkir Wisma Kagama').openPopup();
+            marker12.bindPopup('Lahan Parkir Wisdom Park').openPopup();
+            marker13.bindPopup('Lahan Parkir Wisdom Park').openPopup();
+            marker14.bindPopup('Lahan Parkir Lembah UGM').openPopup();
+            marker15.bindPopup('Lahan Parkir Fitnes Lembah UGM').openPopup();
+            marker16.bindPopup('Lahan Parkir Lapangan UGM').openPopup();
+            marker17.bindPopup('Lahan Parkir Masjid Kampus UGM').openPopup();
+            marker18.bindPopup('Lahan Parkir DSSDI UGM').openPopup();
+            marker19.bindPopup('Lahan Parkir Gelanggang Mahasiswa UGM').openPopup();
+            marker20.bindPopup('Lahan Parkir UGM').openPopup();
+            marker21.bindPopup('Lahan Parkir DTK').openPopup();
+            marker22.bindPopup('Lahan Parkir DTS').openPopup();
+            marker23.bindPopup('Lahan Parkir DTM').openPopup();
+            marker24.bindPopup('Lahan Parkir DTHV').openPopup();
+            //Sekian terimagaji, kalo gatau nanya jan diem diem aja tengs.
+            
+        </script>
+    </body>
+</html>

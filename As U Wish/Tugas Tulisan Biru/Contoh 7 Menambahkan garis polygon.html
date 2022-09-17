@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaflet Polygon</title>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+
+    <body>
+        <div id = "map" style = "width:900px; height:580px"></div>
+        <script>
+            //Creating map option
+            var mapOptions = {
+                center: [-41.2858,174.78682],
+                zoom: 14
+            }
+            //Creating a map object
+            var map = new L.map('map', mapOptions);
+            //Creating a layer object
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            //Adding layer to map
+            map.addLayer(layer);
+            //Creating latlong object
+            var latlngs = [
+                [-41.286, 174.796],
+                [-41.281, 174.786],
+                [-41.279, 174.776],
+                [-41.290, 174.775],
+                [-41.292, 174.788]
+            ];
+            //Creating a polygon
+            var polygon = L.polygon(latlngs, {color: 'red'});
+            //Adding polygon to map
+            polygon.addTo(map);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaflet sample</title>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+
+    <body>
+        <div id="map" style = "width:1200px; height:580px"></div>
+        <script>
+            //Creating map option
+            var mapOptions = {
+                center: [-6.257946786951338, 107.0705029693151],
+                zoom: 15
+            }
+            //Creating a map object
+            var map = new L.map('map', mapOptions);
+
+            //Creating a Layer Object
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+
+            //Adding Layer to the Map
+            map.addLayer(layer);
+
+            //Creating Marker 
+            var marker =
+            L.marker([-6.257946786951338, 107.0705029693151]);
+            
+            //Adding Marker to the map
+            marker.addTo(map);
+        </script>
+    </body>
+</html>

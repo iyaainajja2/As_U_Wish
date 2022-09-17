@@ -1,0 +1,35 @@
+<!DOCTYPE html<>
+<html lang="en">
+	<head>
+		<title>Leaflet sample</title>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	</head>
+	
+	<body>
+		<div id="map" style="width:1200px; height:580px"></div>
+		<script>
+		//Creating map options
+		var mapOptions = {
+		center:[-7.7743, 110.3746],
+		zoom:15
+		}
+		//Creating map object
+		var map = new L.map('map',mapOptions);
+		
+		//Creating a Layer object
+		var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+		
+		//Adding layer to the map
+		map.addLayer(layer)
+		
+		//Creating a marker
+		var marker=
+		L.marker([-7.7743, 110.3746]).addTo(map)
+		
+		//Adding popup to the marker
+		marker.bindPopup('Haii newbie LeafletJS').openPopup();
+		marker.addTo(map);
+		</script>
+	</body>
+</html>

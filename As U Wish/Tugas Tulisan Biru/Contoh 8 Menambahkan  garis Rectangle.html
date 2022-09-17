@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Leaflet Rectangle</title>
+        <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+        <script src = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    </head>
+
+    <body>
+        <div id = "map" style = "width:1500px; height:780px"></div>
+        <script>
+            //Creating map option
+            var mapOptions = {
+                center: [-7.770075625800524, 110.37785638709344],
+                zoom: 18
+            }
+            var map = new L.map('map', mapOptions);
+
+            //Creating a layer object
+            var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+            //Adding layer to map
+            map.addLayer(layer);
+            //Creating latlong object
+            var latlngs = [
+                [-7.769590767360337, 110.37744717551351],
+                [-7.769936253341309, 110.3786273474308],
+                [-7.770536866754706, 110.37842886397198],
+                [-7.7701701206132725, 110.37724869205469]
+            ];
+            //Creating Rectangle Options
+            var rectOptions = {color:'darkred', weight: 1}
+            //Creating a rectangle 
+            var rectangle = L.rectangle(latlngs, rectOptions);
+            //Adding rectangle to map
+            rectangle.addTo(map);
+        </script>
+    </body>
+</html>
